@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave Cs | Video Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1f41a9;
+            --dark: #0F1923;
+            --light: #F8F8F8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(45deg, #1a1a1a, #0F1923);
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            color: #cccccc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            background: #1a1a1a;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-container {
+            position: relative;
+            padding-top: 177.77%;
+            /* 9:16 aspect ratio for vertical videos */
+            overflow: hidden;
+        }
+
+        .video-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #0F1923;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            color: var(--light);
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 2rem 1rem;
+            }
+        }
+
+        /* Watermark */
+        .watermark {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0.3;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <h1>Dawit</h1>
+        <p>Creative Video Editor Specializing in Dynamic Short-Form Content</p>
+    </section>
+
+    <div class="portfolio-grid">
+        <!-- Video 1 -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe class="video-iframe" src="https://www.youtube.com/embed/NgaFNZ67YxU"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe class="video-iframe" src="https://www.youtube.com/embed/gTNLBKvlhbw"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe class="video-iframe" src="https://www.youtube.com/embed/eMMGfPj7lLM"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe class="video-iframe" src="https://www.youtube.com/embed/IzQf2zsVFc8"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe class="video-iframe" src="https://www.youtube.com/embed/9JwKfRmAnAk"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <h2>Contact Me</h2>
+        <div class="social-links">
+            <a href="mailto:your@email.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://youtube.com/yourchannel" class="social-link">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" class="social-link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com/yourprofile" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </section>
+
+    <div class="watermark">©2025 Dave. All rights reserved.</div>
+</body>
+
+</html>
